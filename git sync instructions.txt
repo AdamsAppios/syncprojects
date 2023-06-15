@@ -1,0 +1,66 @@
+Sure, here are the steps to sync your code folder between your Mac and PC using GitHub:
+
+**On the Mac (Original Code)**
+
+1. **Install Git**
+
+If you haven't installed Git, you can download and install it from here: https://git-scm.com/downloads
+
+2. **Initialize a Local Repository**
+
+Open Terminal, navigate to your code folder and initialize a new Git repository using the following command:
+
+```bash
+git init
+```
+
+3. **Stage and Commit Your Code**
+
+Add your code files to the repository and commit the changes with these commands:
+
+```bash
+git add .
+git commit -m "First commit"
+```
+
+4. **Create a GitHub Repository**
+
+Go to GitHub (https://github.com) and create a new repository by clicking on the '+' at the top right corner and selecting 'New repository'. You can choose whether the repository is public or private. Don't initialize the repository with a README since you've already created a local repository.
+
+5. **Link Your Local Repository to Your GitHub Repository**
+
+On your local machine (Mac), you'll need to link your local repository to the GitHub repository you just created. Replace `username` with your GitHub username and `repository` with your repository name:
+
+```bash
+git remote add origin https://github.com/username/repository.git
+```
+
+6. **Push Your Commits to GitHub**
+
+Upload your commits (and therefore your code) to GitHub with the `git push` command:
+
+```bash
+git push -u origin master
+```
+
+**On the PC**
+
+1. **Install Git**
+
+Ensure Git is installed on the PC as well. You can download and install it from here: https://git-scm.com/downloads
+
+2. **Clone the Repository**
+
+On the PC, navigate to the directory where you want your code folder to be using Command Prompt or PowerShell, then clone the repository from GitHub. Replace `username` with your GitHub username and `repository` with your repository name:
+
+```bash
+git clone https://github.com/username/repository.git
+```
+
+Now your code is synced between your Mac and PC! If you make changes on one computer, commit those changes and push them to GitHub. Then pull the changes on the other computer with `git pull`:
+
+```bash
+git pull origin master
+```
+
+Remember to always pull the latest changes before you start working on your code on either computer to avoid conflicts.
